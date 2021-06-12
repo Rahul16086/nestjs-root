@@ -22,7 +22,7 @@ function NewMeetupPage() {
 
     console.log(data);
 
-    router.push('/');
+    await router.push('/');
   }
 
   return (
