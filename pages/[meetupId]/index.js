@@ -23,7 +23,7 @@ function MeetupDetails(props) {
 
 export async function getStaticPaths() {
   const client = await MongoClient.connect(
-    'mongodb+srv://rahul_def:1010@abce@cluster0.wkmpp.mongodb.net/meetups?retryWrites=true&w=majority'
+    'mongodb+srv://rahul_def:1010@abce@cluster0.wkmpp.mongodb.net/meetups?retryWrites=true&w=majority',{ useUnifiedTopology: true }
   );
   const db = client.db();
 
@@ -47,7 +47,7 @@ export async function getStaticProps(context) {
   const meetupId = context.params.meetupId;
 
   const client = await MongoClient.connect(
-    'mongodb+srv://rahul_def:1010@abce@cluster0.wkmpp.mongodb.net/meetups?retryWrites=true&w=majority'
+    'mongodb+srv://rahul_def:1010@abce@cluster0.wkmpp.mongodb.net/meetups?retryWrites=true&w=majority',{ useUnifiedTopology: true }
   );
   const db = client.db();
 
